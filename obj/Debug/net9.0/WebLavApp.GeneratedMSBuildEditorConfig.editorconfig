@@ -1,0 +1,117 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebLavApp
+build_property.RootNamespace = WebLavApp
+build_property.ProjectDir = C:\Users\joaop\WebLavApp\WebLavApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\joaop\WebLavApp\WebLavApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Modalidades/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxpZGFkZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Modalidades/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxpZGFkZXNcRGVsZXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Modalidades/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxpZGFkZXNcRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Modalidades/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxpZGFkZXNcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Modalidades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxpZGFkZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Secretaria/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjcmV0YXJpYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Secretaria/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjcmV0YXJpYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Secretaria/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjcmV0YXJpYVxEZXRhbGhlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Secretaria/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjcmV0YXJpYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Secretaria/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjcmV0YXJpYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/ServicosInternos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb3NJbnRlcm5vc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/ServicosInternos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb3NJbnRlcm5vc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/ServicosInternos/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb3NJbnRlcm5vc1xEZXRhbGhlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/ServicosInternos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb3NJbnRlcm5vc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/ServicosInternos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vydmljb3NJbnRlcm5vc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joaop/WebLavApp/WebLavApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-w7xmcldyr6

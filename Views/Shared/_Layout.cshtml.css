@@ -1,0 +1,90 @@
+﻿/* Link da documentação oficial:
+https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #2b6777;
+}
+
+a {
+  color: #2b6777;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1d4f5f;
+  text-decoration: none;
+}
+
+/* Botão primário estilizado */
+.btn-primary {
+  color: #fff;
+  background-color: #2b6777;
+  border-color: #245c6a;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e4e5a;
+  border-color: #1e4e5a;
+}
+
+/* Nav pills ativas */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #2b6777;
+  border-color: #245c6a;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Bordas suaves */
+.border-top {
+  border-top: 1px solid #dee2e6;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Sombras mais suaves */
+.box-shadow {
+  box-shadow: 0 .2rem .6rem rgba(0, 0, 0, 0.05);
+}
+
+/* Botão de aceitar política (caso use) */
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #2b6777;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button.accept-policy:hover {
+  background-color: #1e4e5a;
+}
+
+/* Rodapé fixo com cor e visual mais moderno */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #e4edf1;
+  color: #2b6777;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 60px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
