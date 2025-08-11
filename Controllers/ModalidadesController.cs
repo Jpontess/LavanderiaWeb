@@ -16,7 +16,7 @@ public class ModalidadesController : Controller
         _context = context;
     }
 
-    
+
     public async Task<IActionResult> Index(string? filtroNome, string? filtroModalidade, DateTime? filtroDataInicio, DateTime? filtroDataFim)
     {
         var ModalidadesQuery = _context.Modalidades.AsQueryable();
@@ -173,9 +173,9 @@ public class ModalidadesController : Controller
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
- 
- 
-  public async Task<IActionResult> Detalhes(int id)
+
+
+    public async Task<IActionResult> Detalhes(int id)
     {
         var modalidades = await _context.Modalidades.FindAsync(id);
         if (modalidades == null)
@@ -183,5 +183,20 @@ public class ModalidadesController : Controller
             return NotFound();
         }
         return View(modalidades);
+    }
+    
+    public IActionResult Fechamento()
+    {
+        var somaPorModalidade = _context.Modalidades
+       .GroupBy(m => m.Modalidade)
+       .Select(g => new
+       {
+           Modalidade = g.Key,
+           Quantidade = g.Sum(m => m.Quantidade)
+       }).ToList();
+
+        ViewBag.TotalGeral = somaPorModalidade.Sum(item => item.Quantidade);
+        ViewBag.Total = somaPorModalidade;
+        return View();
     }
 }

@@ -174,7 +174,7 @@ public class SecretariaController : Controller
             return NotFound();
         }
 
-         
+
         ViewBag.Secretarias = new List<string>
         {
             "Secretaria da mulher",
@@ -184,5 +184,21 @@ public class SecretariaController : Controller
         };
 
         return View(secretaria);
+    }
+
+
+    public IActionResult Fechamento()
+    {
+        var fechamento = _context.Secretarias
+        .OrderBy(f => f.Secretarias)
+        .Select(g => new
+        {
+            Secretarias = g.Secretarias,
+            Quantidade = g.Quantidade
+        }).ToList();
+
+        ViewBag.TotalGeral = fechamento.Sum(i => i.Quantidade);
+        ViewBag.Total = fechamento;
+        return View();
     }
 }

@@ -180,5 +180,23 @@ public class ServicosInternosController : Controller
         return _context.ServicoInternos.Any(s => s.Id == id);
     }
 
+    public IActionResult Fechamento()
+    {
+        var fechamento = _context.ServicoInternos
+        .OrderBy(f => f.Departamento)
+        .Select(d => new
+        {
+            Departamento = d.Departamento,
+            Quantidade = d.Quantidade,
+            Dia = d.Data.Day
+        }).ToList();
+
+        ViewBag.TotalGeral = fechamento.Sum(i => i.Quantidade);
+        ViewBag.Total = fechamento;
+        ViewBag.Data = fechamento;
+
+        return View();
+    }
+
 
 }

@@ -228,3 +228,4 @@ C:\Users\joaop\WebLavApp\WebLavApp\obj\Debug\net9.0\WebLavApp.csproj.Up2Date
 C:\Users\joaop\WebLavApp\WebLavApp\obj\Debug\net9.0\compressed\qvdvg2y680-kordy9e9o4.gz
 C:\Users\joaop\WebLavApp\WebLavApp\obj\Debug\net9.0\compressed\rpodsrnhjr-wmekrhaif5.gz
 C:\Users\joaop\WebLavApp\WebLavApp\obj\Debug\net9.0\compressed\013t4fbn04-wmekrhaif5.gz
+C:\Users\joaop\WebLavApp\WebLavApp\obj\Debug\net9.0\WebLavApp.sourcelink.json

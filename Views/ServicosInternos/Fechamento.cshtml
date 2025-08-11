@@ -1,0 +1,42 @@
+@model IEnumerable<WebLavApp.Models.ServicoInterno>
+@{
+    ViewData["Title"] = "Relatório por Serviços Internos";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <table class="table table-striped table-hover mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Departamento</th>
+                <th>Mês</th>
+                <th class="text-end">Quantidade Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Total)
+            {
+                <tr>
+                    <td>@item.Departamento</td>
+                    <td>@item.Dia</td>
+                    <td class="text-end">@item.Quantidade</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr class="table-active fw-bold">
+                <td colspan="2">Total Geral</td>
+                <td class="text-end">@ViewBag.TotalGeral</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Botões de ação -->
+    <div class="d-flex justify-content-end mt-3 gap-2">
+        <a href="#" class="btn btn-success">
+            <i class="bi bi-file-earmark-excel"></i> Exportar para Excel
+        </a>
+        <a href="Index" class="btn btn-secondary">Voltar</a>
+    </div>
+</div>  
