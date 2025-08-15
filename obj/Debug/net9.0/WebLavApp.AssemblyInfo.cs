@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebLavApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bb11a6539c064c5f9c477b6db16e294b251b45f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e445ec8d2001d222e3a3f0ba5e78cf64935e0ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebLavApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebLavApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

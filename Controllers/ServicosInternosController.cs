@@ -180,22 +180,31 @@ public class ServicosInternosController : Controller
         return _context.ServicoInternos.Any(s => s.Id == id);
     }
 
-    public IActionResult Fechamento()
+    [HttpGet("ServicosInternos/Fechamento")]
+    public IActionResult Fechamento(int? data)
     {
-        var fechamento = _context.ServicoInternos
-        .OrderBy(f => f.Departamento)
-        .Select(d => new
+        var context = _context.ServicoInternos.AsQueryable();
+
+        if (data > 0)
         {
-            Departamento = d.Departamento,
-            Quantidade = d.Quantidade,
-            Dia = d.Data.Day
-        }).ToList();
+            context = context.Where(s => s.Data.Month == data.Value);
+        }
 
-        ViewBag.TotalGeral = fechamento.Sum(i => i.Quantidade);
-        ViewBag.Total = fechamento;
-        ViewBag.Data = fechamento;
+        var agrupar = context
+        .GroupBy(s => s.Departamento) // agrupar por departamento
+        .Select(g => new WebLavApp.Models.ServicoInterno
+        {
+            Departamento = g.Key,
+            Data = g.Min(x => x.Data), //Pega a menor data do grupo
+            Quantidade = g.Sum(x => x.Quantidade)
+        })
+        .OrderBy(s => s.Departamento)
+        .ToList();
 
-        return View();
+        ViewBag.Total = context.Sum(s => s.Quantidade);
+        ViewData["mes"] = data?.ToString() ?? "";
+       
+        return View(agrupar);
     }
 
 

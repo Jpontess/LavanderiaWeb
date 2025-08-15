@@ -13,6 +13,5 @@ namespace WebLavApp.Data
         public DbSet<ServicoInterno> ServicoInternos { get; set; }
         public DbSet<Modalidades> Modalidades { get; set; }
         public DbSet<Secretaria> Secretarias { get; set; }
-        public DbSet<Fechamento> Fechamentos { get; set; }
     }
 }

@@ -187,18 +187,29 @@ public class SecretariaController : Controller
     }
 
 
-    public IActionResult Fechamento()
+    public IActionResult Fechamento(int? data)
     {
-        var fechamento = _context.Secretarias
-        .OrderBy(f => f.Secretarias)
-        .Select(g => new
-        {
-            Secretarias = g.Secretarias,
-            Quantidade = g.Quantidade
-        }).ToList();
+        var context = _context.Secretarias.AsQueryable();
 
-        ViewBag.TotalGeral = fechamento.Sum(i => i.Quantidade);
-        ViewBag.Total = fechamento;
-        return View();
+        if (data > 0)
+        {
+            context = context.Where(s => s.Data.Month == data.Value);
+        }
+
+        var agrupar = context
+        .GroupBy(s => s.Secretarias)
+        .Select(g => new WebLavApp.Models.Secretaria
+        {
+            Secretarias = g.Key,
+            Data = g.Min(x => x.Data),
+            Quantidade = g.Sum(x => x.Quantidade)
+        })
+        .OrderBy(s => s.Secretarias)
+        .ToList();
+
+        ViewBag.Total = context.Sum(s => s.Quantidade);
+        ViewData["mes"] = data?.ToString() ?? "";
+
+        return View(agrupar);
     }
 }

@@ -1,40 +1,67 @@
-@model IEnumerable<WebLavApp.Models.Modalidades>
+@model List<WebLavApp.Models.Modalidades>
+
 @{
-    ViewData["Title"] = "Relatório por Modalidade";
+    ViewData["Title"] = "Fechamento Mensal";
+    var mes = ViewData["mes"];
+    var total = ViewBag.Total ?? 0;
 }
 
-<div class="container mt-4">
-    <h2>@ViewData["Title"]</h2>
+<h2>Fechamento Mensal</h2>
 
-    <table class="table table-striped table-hover mt-4">
-        <thead class="table-dark">
+<form method="get" asp-action="Fechamento" class="mb-3">
+    <div class="row">
+        <div class="col-md-3">
+            <label for="data" class="form-label">Mês</label>
+            <select name="data" id="data" class="form-control">
+                <option value="">Selecione...</option>
+                @for (int i = 1; i <= 12; i++)
+                {
+                    var isSelected = mes != null && mes.ToString() == i.ToString();
+                    <option value="@i" selected="@(isSelected ? "selected" : null)">
+                        @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i)
+                    </option>
+                }
+            </select>
+        </div>
+        <div class="col-md-2 align-self-end">
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </div>
+    </div>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <p>
+        <strong>Mês:</strong> 
+        @(mes != null && int.TryParse(mes.ToString(), out var mesInt) 
+            ? System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mesInt) 
+            : "Todos")
+    </p>
+
+    <table class="table table-bordered table-striped">
+        <thead>
             <tr>
                 <th>Modalidade</th>
-                <th class="text-end">Quantidade Total</th>
+                <th>Data</th>
+                <th>Quantidade</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in ViewBag.Total)
+            @foreach (var item in Model)
             {
                 <tr>
                     <td>@item.Modalidade</td>
-                    <td class="text-end">@item.Quantidade</td>
+                    <td>@item.Data.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Quantidade</td>
                 </tr>
             }
         </tbody>
-        <tfoot>
-            <tr class="fw-bold">
-                <td>Total Geral</td>
-                <td class="text-end">@ViewBag.TotalGeral</td>
-            </tr>
-        </tfoot>
     </table>
-</div>
 
-<!-- Botão opcional para exportar -->
-<div class="text-end mt-3">
-    <a href="#" class="btn btn-success">
-        <i class="bi bi-file-earmark-excel"></i> Exportar para Excel
-    </a>
-    <a href="Index" class="btn btn-secondary">Voltar</a>
-</div>
+    <hr />
+    <h4>Total do Mês: @total</h4>
+}
+else
+{
+    <div class="alert alert-warning">Nenhum registro encontrado para o filtro aplicado.</div>
+}
